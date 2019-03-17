@@ -160,6 +160,7 @@ def print_ranking(dict):
 
 def find_references(filepath):
     # print(filepath)
+    references = []
 
     with open(filepath, 'r') as bill_file:
         bill = bill_file.read()
@@ -325,8 +326,6 @@ def find_references(filepath):
                 # print("part", sentence)
                 # exit(0)
                 pass
-
-        references = []
 
         for intro, intro_year, bill_text, bill_year, part in parts:
             # print("{}: {}".format(bill_year, bill_text))

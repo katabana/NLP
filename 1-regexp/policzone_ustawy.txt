@@ -1,0 +1,2 @@
+Total count 25798
+Word set ['ustawy', 'ustawa', 'ustaw', 'ustawie', 'ustawą', 'ustawę', 'ustawowych', 'ustawowo', 'ustawami', 'ustawach', 'ustawowego', 'ustawowym', 'ustawom', 'ustawowymi', 'ustawową', 'ustawowej', 'ustawowy', 'ustawowe', 'ustawowi', 'ustawowa', 'ustawowemu']
