@@ -153,9 +153,14 @@ def aggregate(references):
     return aggregated
 
 
-def print_ranking(dict):
+def print_ranking(dict, titles):
     for key, value in sorted(dict.items(), key=lambda x: x[1][0], reverse=True):
-        print("{} - {}: {}".format(value[0], key, value[1]))
+        if key in titles.keys():
+            titled_value = value[1]
+            titled_value.title = titles[key]
+            print("{} - {}: {}".format(value[0], key, titled_value))
+        else:
+            print("{} - {}: {}".format(value[0], key, value[1]))
 
 
 def find_references(filepath):
@@ -267,6 +272,17 @@ def aggregate_rankings(rankings):
     return aggregated
 
 
+def find_title_in_file(filepath):
+    with open(filepath, 'r') as bill_file:
+        bill = bill_file.read()
+        bill = regex.sub(r'[\t\p{Zs}\xA0\n]+', ' ', bill)  # remove redundant spaces
+
+        title = regex.findall(r'USTAWA(?:\X*?(?:r\.|roku))(?P<title>\X*?)(?:Art|<|Rozdzia)', bill)
+        if title:
+            # print("TITLE", title)
+            return title[0]
+
+
 def main():
     dir_path = 'ustawy'
     all_references = []
@@ -281,8 +297,16 @@ def main():
     # filename = '2001_1188.txt'
     # all_references.append(find_references('{}/{}'.format(dir_path, filename)))
 
+    # read titles
+    titles = {}
+    for filename in os.listdir(dir_path):
+        title = find_title_in_file('{}/{}'.format(dir_path, filename))
+        id = regex.findall('(?P<id>\X*)\.txt', filename)[0]
+        if title:
+            titles[id] = title
+
     print("*** RANKING ***")
     aggregated = aggregate_rankings(all_references)
-    print_ranking(aggregated)
+    print_ranking(aggregated, titles)
 
 main()
