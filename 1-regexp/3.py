@@ -10,6 +10,7 @@ import os
 def invalid_word(word):
     match = (regex.match(r'\bustawicz\p{L}*\b', word)) or \
             (regex.match(r'\bustawyz\b', word)) or \
+            (regex.match(r'\bustawow\p{L}*\b', word)) or \
             (regex.match(r'\bustaworaz\b', word)) or \
             (regex.match(r'\bustawod\p{L}*\b', word)) or \
             (regex.match(r'\bustawia\p{L}*\b', word)) or \
