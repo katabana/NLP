@@ -52,7 +52,7 @@ def find_year_separated(intro_year, bill_year, sentence, part, titles):
 
     # if no year after 'Dz. U.' returns
     without_year = regex.findall(r"Dz\.[\t\p{Zs}\xA0\n]*U\.[\t\p{Zs}\xA0\n]*"  # Dz. U.
-                                 r"(?=Nr|poz)(?P<content>.+?(?=[\t\p{Zs}\xA0\n]z|$))", sentence)  # avoid year
+                                 r"(?=Nr|poz)(?P<content>\X+?(?=[\t\p{Zs}\xA0\n]z|$))", sentence)  # avoid year
 
     year_separated = regex.findall(r"z[\t\p{Zs}\xA0\n]*"  # 'z '
                                    r"(?P<year>\w{4})[\t\p{Zs}\xA0\n]*r.[\t\p{Zs}\xA0\n]*"  # 'XXXX r. '
@@ -85,7 +85,7 @@ def find_year_separated(intro_year, bill_year, sentence, part, titles):
     if year_separated:
         for year, content in year_separated:
             title = find_title(year, titles)
-            c = regex.search(r".+?(?=[\t\p{Zs}\xA0\n]z|$)", content)
+            c = regex.search(r"\X+?(?=[\t\p{Zs}\xA0\n]z|$)", content)
             records.append((year, c.group(0), title))
             # print('{} r.: {}'.format(year, c.group(0)))
 
@@ -202,10 +202,9 @@ def find_references(filepath):
                 r"(?P<senten>(?!r\.|poz.)\X*?"
                 r"(?=\X*?(?P<year1>\d{4}))*\X*?"  # may contain a year
                 r"(?P<dz>(?:Dz\.[\t\p{Zs}\xA0\n]*U\.[\t\p{Zs}\xA0\n]*)"  # Dz. U.
-                r"(?:.*?(?:(?P<year2>\d{4})?[\t\p{Zs}\xA0\n]*(?:roku|r\.))))"  # po Dz. U.: '(...) XXXX roku\r. '
+                r"(?:\X*?(?:(?P<year2>\d{4})?[\t\p{Zs}\xA0\n]*(?:roku|r\.))))"  # po Dz. U.: '(...) XXXX roku\r. '
                 r"(?P<rest>\X*))",
                 sentence
-                # 'dlugie zdanie\n bo czemu nie\n Dz. U. Nr ... 1994 r.'
             )
             if part:
                 # print("part", part)
@@ -264,9 +263,10 @@ def aggregate_rankings(rankings):
     aggregated = {}
     for ranking in rankings:
         for ref in ranking:
+            count = ranking[ref][0]
             if ref in aggregated.keys():
                 n, val = aggregated[ref]
-                aggregated[ref] = (n + 1, val)
+                aggregated[ref] = (n + count, val)
             else:
                 aggregated[ref] = (ranking[ref])
     return aggregated
