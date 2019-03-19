@@ -171,6 +171,9 @@ def find_references(filepath):
         bill = bill_file.read()
         bill = regex.sub(r'[\t\p{Zs}\xA0\n]+', ' ', bill)  # remove redundant spaces
 
+        # remove Dz. U. at the beginning
+        bill = regex.sub(r'\s{,1}Dz\.\sU\.', '', bill)
+
         sentences = regex.findall(
             r"(?P<sent>(?:^|\.|\p{Lu})[\t\p{Zs}\xA0\n]*" 
             # r"\X{,400}?"   # TODO : pick a number! for long sentences
