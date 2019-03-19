@@ -15,11 +15,92 @@ import os
 #      " e) domów składowych,".
 
 
-# TODO: solve problem
-# po ust. 2
-# dodaje się ust. 2a w brzmieniu:
+# TODO: case to consider:
+# 8) w art. 8:
+# a) ust. 1
+# otrzymuje brzmienie:
+# (...)
+# b) w ust. 1a:
+# – pkt 2 i 3
 
-# TODO: MAKE RANKING FOR EVERY BILL
+
+def make_range(article):
+    arts_range = []
+    match = regex.findall(r'(?P<sn>\d*)(?P<sl>\p{L}*)-(?P<en>\d*)(?P<el>\p{L}*)', article)
+    sn, sl, en, el = match[0]
+    for i in range(int(sn), int(en) + 1):
+        if sl and el:
+            for j in range(ord(sl), ord(el) + 1):
+                arts_range.append(str(i)+chr(j))
+        else:
+            arts_range.append(str(i))
+    return arts_range
+
+
+def parse_prefix_numbers(prefix, art_text):
+    final_articles = []
+    art_text = regex.sub(prefix, '', art_text)
+    art_text = regex.sub('\s(?:i|oraz)\s', ', ', art_text)
+    articles = regex.split(', ', art_text)
+    for article in articles:
+        if '-' in article:
+            final_articles += make_range(article)
+        else:
+            final_articles.append(article)
+
+    return final_articles
+
+
+def parse_articles_only(articles):
+    references = {}
+    for art, ust in articles:
+        # for art. X only
+        arts = parse_prefix_numbers(r'art\. ', art)
+        if not ust:
+            for a in arts:
+                id = 'art. ' + a
+                if id in references:
+                    n = references[id]
+                    references[id] = n + 1
+                else:
+                    references[id] = 1
+    return references
+
+
+def parse_paragraphs(paragraphs):
+    references = {}
+    last_art = ''
+    for art_ref, art, par in paragraphs:
+        if art_ref:
+            last_art = parse_prefix_numbers(r'art\. ', art_ref)[-1]
+        article = 'art. ' + parse_prefix_numbers(r'art\. ', art)[-1]
+        pars = parse_prefix_numbers(r'ust\. ', par)
+        if not art:
+            article = regex.sub(r'A', 'a', last_art)
+
+        id = article
+        if id:
+            id = id + ', '
+        for p in pars:
+            p_id = id + 'ust. ' + p
+            if p_id in references:
+                n = references[p_id]
+                references[p_id] = n + 1
+            else:
+                references[p_id] = 1
+    return references
+
+
+def merge_references(rankings):
+    final = {}
+    for ranking in rankings:
+        for id, value in ranking.items():
+            if id in final:
+                last_value = final[id]
+                final[id] = last_value + value
+            else:
+                final[id] = value
+    return final
 
 
 def find_references(filepath):
@@ -29,131 +110,109 @@ def find_references(filepath):
         bill = bill_file.read()
         bill = regex.sub(r'[\t\p{Zs}\xA0\n]+', ' ', bill)  # remove redundant spaces
 
-        # get sentences
+        # PROBLEM: with citations -> it is not that simple -> how to distinguish which " should end the citation?
+        # there are internal "" as well.
+
+        # remove citations
+        # test_citation = 'AAAAadsd „bbbbbb” "Cccc"  ajjasjdsahs'
+        # bill = regex.sub(r'(?:„\X*?”|"\X*?")', '', bill)
+
+        # Articles may be 'Art. D+L*'
+
+        # find fragments starting with 'Art. X' (until next Art or $?)
         sentences = regex.findall(
-            r"(?P<sent>(?:^|\.|\p{Lu})[\t\p{Zs}\xA0\n]*"
-            r"\X*?"
-            r"(?=(?:\.[\t\p{Zs}\xA0\n]*(?!U\.|Nr)(?:\p{Lu}|$)))"
-            r")",
+            r"(?P<sent>(?:^|)Art\."
+            r"\X*?)(?=Art\.|$)"
+            # r")"
+            r"",
             bill)
             # 'Po ust. 2 dodaje się ust. 2a w brzmieniu:')
-
-        # print(sentences)
-        # exit(0)
-
-        # TODO: find fragments starting with 'Art. X'
 
         parts = []
         # find the fragments with these references
         for sentence in sentences:
+
             part = regex.findall(
                 r"(?:^|\.)"
-                r"(?P<senten>(?!r\.|poz.)\X*?"
-                r"(?P<ref>(?:art\.|ust\.)\X*)+"
-                r"(?P<rest>(?:,)\X*)"
-                r")",
+                r"(?P<senten>(?!r\.|poz.)\X*"
+                r"(?:art\.|ust\.)\X*)"
+                # r"(?P<rest>(?:,)\X*)"
+                r"",
                 sentence
             )
-            for record in part:
-                # print(record[1])
-                parts.append(record[1])
+            if not part:
+                # print("\n***\nSENT", sentence)
+                # print()
+                pass
+            else:
+                parts.append(part[0])
 
-        references = []
+        rankings = []
         for fragment in parts:
-            print("FRAG", fragment)
 
-            test_sentence = 'Art. 2. Bart. 1, art. 200a, 20bb. W art. 100-103 ust. 300, 200 i 10 byyyy,' \
+            test_sentence = 'Art. 2. Bart. 1, art: 200a, 20bb. W art. 100-103 w ust. 300, 200 i 10 byyyy,' \
                             ' art. 400, 20. W art. 23 i 40, art. 30.' \
-                            ' Art. 3. W art. 500, 502-505 i 60, bo ust. 70-78. W art. 90 i 91, art. 100.'
-            # art. X (, X i X)
+                            ' Art. 3. W art. 500: 18) ust. 1, 502-505 i 60, bo ust. 70-78. W art. 90 i 91, art. 100.'
+            # art. X (, X i X-X)
 
-            # matches properly, saves if ust if it follows
+            # saves ust if it follows
             # finds both if art. (X) ust. (X)
             art = regex.findall(
-                r"(?P<art>\bart\."
+                r"(?P<art>\bart(?:\.|:)"  # art. lub art:
                 # r"(?:(?P<big>\bArt\.\s\d+(?:\p{L}|))\X*?)?(?P<art>\bart\."
                 r"(?:"
-                r"(?:,\s|\s|\si\s)"
+                r"(?:,\s|\s|\si\s|-|\soraz\s)"
                 r"\d+(?:\p{L}*|)"
                 r")+"
-                # r"(?=,\s\p{L}|\.|$|:)(?<!art\.)"
-                r")"
-                r"(?:\s(?P<ust>\bust\."
+                r")(?:(?::\s\d+\)|:\s\p{L}+\))|:|)"  # ': a) ' lub ': 19) lub '' lub ': '
+                r"(?:\s(?:w\s|)"  # 'ust.' lub 'w ust.' lub ': '
+                r"(?P<ust>\bust(?:\.|:)"
                 r"(?:"
-                r"(?:,\s|\s|\si\s)"
+                r"(?:,\s|\s|\si\s|-|\soraz\s)"
                 r"\d+(?:\p{L}*|)"
                 r")+)"
                 # r"(?=,\s\p{L}|\.|$|:)(?<!art\.)"
                 r")*"
                 r"",
-                test_sentence
-                # fragment
+                # test_sentence
+                fragment
             )
 
-            art = regex.findall(
-                r"(?P<art>\bart\."
-                # r"(?:(?P<big>\bArt\.\s\d+(?:\p{L}|))\X*?)?(?P<art>\bart\."
-                r"(?:"
-                r"(?:,\s|\s|\si\s|-)"
-                r"\d+(?:\p{L}*|)"
-                r")+"
-                # r"(?=,\s\p{L}|\.|$|:)(?<!art\.)"
-                r")"
-                r"(?:\s(?P<ust>\bust\."
-                r"(?:"
-                r"(?:,\s|\s|\si\s|-)"
-                r"\d+(?:\p{L}*|)"
-                r")+)"
-                # r"(?=,\s\p{L}|\.|$|:)(?<!art\.)"
-                r")*"
-                r"",
-                test_sentence
-                # fragment
-            )
-
-            print("ART", art)
-            # exit(0)
-
-            # matches ust., if art. preceeds, then it is matched
+            # matches ust., if art. precedes, then it is matched too
             ust = regex.findall(
-                # r"(?P<art>\bart\."
-                r"(?:(?P<big>\bArt\.\s\d+(?:\p{L}|))\X*?)?(?P<art>\bart\."
+                r"(?:(?P<big>\bArt\.\s\d+(?:\p{L}|))\X*?)?(?:(?P<art>\bart(?:\.|:)"
                 r"(?:"
-                r"(?:,\s|\s|\si\s|-)"
+                r"(?:,\s|\s|\si\s|-|\soraz\s)"
                 r"\d+(?:\p{L}*|)"
                 r")+"
-                r"\s)*"
-                r"(?P<ust>\bust\."
+                r")(?:(?::\s\d+\)|:\s\p{L}+\))|:|)\s)*(?:w\s|)"
+                r"(?P<ust>\bust(?:\.|:)"
                 r"(?:"
-                r"(?:,\s|\s|\si\s|-)"
+                r"(?:,\s|\s|\si\s|-|\soraz\s)"
                 r"\d+(?:\p{L}*|)"
                 r")+"
-                # r"(?=,\s\p{L}|\.|$|:)(?<!art\.)"
                 r")",
-                test_sentence
-                # fragment
+                # test_sentence
+                fragment
             )
 
-            # TODO: parse art. X, ust. X, art. X ust. X that were found
-            # TODO: remember to do 'art. X ust. X' only once
-            # TODO: problem -> how to get article of ust without art?
+            result = parse_articles_only(art)
+            result.update(parse_paragraphs(ust))
 
-            # regulation ID
+            # ordered = sorted(result.items(), key=lambda x: x[1], reverse=True)
+            # for r in ordered:
+            #     print(r)
 
-            print("ust", ust)
-            # exit(0)
+            # print(ordered)
+            rankings.append(result)
 
-            exit(0)
-
-            print('FRA', fragment)
-            for ref in refs:
-                if ref:
-                    print("REF", ref)
-                    references.append(ref)
-        # print(references)
-        exit(0)
-
-    pass
+    ranking = merge_references(rankings)
+    print("*** RANKING ***")
+    ordered = sorted(ranking.items(), key=lambda x: x[1], reverse=True)
+    for r in ordered:
+        print("{} - {}".format(r[1], r[0]))
+    print()
+    return ranking
 
 
 def main():
@@ -166,8 +225,13 @@ def main():
             all_references.append(find_references('{}/{}'.format(dir_path, filename)))
         n = n + 1
 
+    # ranking = merge_references(all_references)
+    # ordered = sorted(ranking.items(), key=lambda x: x[1], reverse=True)
+    # for r in ordered:
+    #     print(r)
+
     # for testing:
-    # filename = '2001_1188.txt'
+    # filename = '2000_136.txt'
     # all_references.append(find_references('{}/{}'.format(dir_path, filename)))
 
     # print("*** RANKING ***")
