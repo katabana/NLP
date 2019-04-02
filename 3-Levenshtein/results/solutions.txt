@@ -1,0 +1,497 @@
+30 most often occuring words that are not in the dictionary:
+
+ [('arta', 30992), ('polska', 1398), ('margin', 1111), ('późn', 1080), ('gospodarek', 834), ('ue', 591), ('banek', 544), ('family', 543), ('text', 531), ('mso', 448), ('bottom', 399), ('face', 327), ('panose', 326), ('serif', 325), ('gmo', 298), ('times', 296), ('członka', 293), ('iv', 272), ('pkp', 272), ('sa', 266), ('name', 254), ('size', 248), ('ewg', 235), ('left', 233), ('right', 233), ('sww', 227), ('nbp', 214), ('wolna', 211), ('efta', 204), ('wyroba', 197)]
+
+All the words that occur exactly 3 times:
+
+ [('adaptacyjnoopiekuńcze', 3), ('agaricus', 3), ('aleksandra', 3), ('apostille', 3), ('armenia', 3), ('asistent', 3), ('atena', 3), ('ateny', 3), ('auditorów', 3), ('auschwitz', 3), ('autologicznego', 3), ('aw', 3), ('belina', 3), ('betaagonistycznym', 3), ('betania', 3), ('biorównoważności', 3), ('birkenau', 3), ('bogusz', 3), ('boguszów', 3), ('braille', 3), ('brucellosis', 3), ('błońska', 3), ('cannabis', 3), ('caprine', 3), ('cattles', 3), ('cał', 3), ('cała', 3), ('cego', 3), ('chemiczn', 3), ('chloro', 3), ('cidr', 3), ('cobrpib', 3), ('condensed', 3), ('control', 3), ('cych', 3), ('cyjanamidowy', 3), ('cza', 3), ('czechowski', 3), ('daninowym', 3), ('deklarow', 3), ('dimocznika', 3), ('div', 3), ('dnego', 3), ('eeg', 3), ('egzo', 3), ('ekoinfonetu', 3), ('elim', 3), ('endo', 3), ('enia', 3), ('enodimoczn', 3), ('eutc', 3), ('fangsong', 3), ('fb', 3), ('francja', 3), ('gemeinschaft', 3), ('ghp', 3), ('gigadżul', 3), ('gmdss', 3), ('gmp', 3), ('grecka', 3), ('górnicz', 3), ('górska', 3), ('haematopoietic', 3), ('haga', 3), ('hagera', 3), ('hbv', 3), ('heksanon', 3), ('helsinki', 3), ('heptanon', 3), ('highly', 3), ('hydrolizatory', 3), ('hydrologicznometeorologicznych', 3), ('hz', 3), ('ia', 3), ('instrumentalistyki', 3), ('interkalibracyjnych', 3), ('interpol', 3), ('isbn', 3), ('isbt', 3), ('iu', 3), ('ixa', 3), ('jarocin', 3), ('jastrzębia', 3), ('jastrzębie', 3), ('jednowapniowy', 3), ('kaiti', 3), ('kamienna', 3), ('kamionek', 3), ('katowickie', 3), ('kidawa', 3), ('komor', 3), ('komory', 3), ('kow', 3), ('kpk', 3), ('krotonylide', 3), ('ksow', 3), ('ktry', 3), ('ktu', 3), ('kwadratowyc', 3), ('kwh', 3), ('lidenod', 3), ('marino', 3), ('mark', 3), ('małgorzata', 3), ('małkinia', 3), ('mda', 3), ('medical', 3), ('meiryo', 3), ('meslin', 3), ('metanon', 3), ('metylobutylo', 3), ('mikroeleme', 3), ('mikroinstalacja', 3), ('mikroinstalacje', 3), ('mikroprzedsiębiorcy', 3), ('międzykościelnych', 3), ('międzysystemowych', 3), ('morfolina', 3), ('morpak', 3), ('mycoplasma', 3), ('myriad', 3), ('mysłowice', 3), ('naftoilo', 3), ('naturalneg', 3), ('naukowobadawcze', 3), ('naukowobadawczej', 3), ('necrosis', 3), ('niektrych', 3), ('niny', 3), ('niowych', 3), ('nkwd', 3), ('nodimocznik', 3), ('ności', 3), ('odolan', 3), ('odolanów', 3), ('old', 3), ('opcw', 3), ('operacyjnoratowniczego', 3), ('oru', 3), ('orzecznikw', 3), ('osiarc', 3), ('oszczędnościowokredytowych', 3), ('otrzymywa', 3), ('ołnierzy', 3), ('pabianice', 3), ('pasieki', 3), ('pentyloindol', 3), ('ph', 3), ('pigs', 3), ('pilchowice', 3), ('pirolidyna', 3), ('pirolidynylo', 3), ('plata', 3), ('plato', 3), ('pneumoniae', 3), ('podlaska', 3), ('podwielokrotności', 3), ('pogórniczych', 3), ('posodowe', 3), ('posodowego', 3), ('postac', 3), ('pox', 3), ('pra', 3), ('produ', 3), ('przecho', 3), ('przeliczen', 3), ('przeprowa', 3), ('przeszczepień', 3), ('przezeń', 3), ('publicz', 3), ('regazyfikacji', 3), ('rozpu', 3), ('roztwo', 3), ('roślinn', 3), ('rytorialnego', 3), ('salmonellosis', 3), ('salmonelozy', 3), ('sana', 3), ('sanitarnoepidemiologiczne', 3), ('sativa', 3), ('sce', 3), ('secret', 3), ('septicaemia', 3), ('sheep', 3), ('siemianowice', 3), ('sieradz', 3), ('składnikw', 3), ('sopot', 3), ('species', 3), ('sprzedaą', 3), ('stilbenów', 3), ('subpartycypację', 3), ('szczegól', 3), ('szczegłowe', 3), ('szkolnowychowawczych', 3), ('szkolnowychowawczym', 3), ('szreniawa', 3), ('technicznoubezpieczeniowych', 3), ('tekton', 3), ('telesprzedaż', 3), ('terytorial', 3), ('testw', 3), ('tio', 3), ('tość', 3), ('trifenyle', 3), ('trzebinia', 3), ('trzeżeniem', 3), ('tuberculosis', 3), ('tworóg', 3), ('tychy', 3), ('ubezpiecze', 3), ('uop', 3), ('ureafor', 3), ('va', 3), ('walek', 3), ('warszawacentrum', 3), ('wawczej', 3), ('winopodobne', 3), ('winopodobnych', 3), ('wodnobłotnych', 3), ('wodociągowokanalizacyjnego', 3), ('współkontrolę', 3), ('wymienio', 3), ('wypożyczeń', 3), ('władysław', 3), ('władysława', 3), ('xxxvi', 3), ('zacją', 3), ('zadrzewieniach', 3), ('zania', 3), ('zas', 3), ('zasiedleń', 3), ('zbywczej', 3), ('zbywczą', 3), ('zmczciwsppktodnonikaartykuempunktem', 3), ('znych', 3), ('zu', 3), ('zwierzęceg', 3), ('świad', 3), ('świętochłowice', 3), ('żary', 3), ('żetowych', 3), ('żory', 3), ('żydowo', 3)]
+
+** CORRECTIONS **
+SOLUTION ('adaptacjonizm', 1.0, 'adaptacyjnoopiekuńcze')
+**
+SOLUTION ('Marcus', 0.026999999999999996, 'agaricus')
+**
+SOLUTION ('Aleksandra', 0.0010000000000000002, 'aleksandra')
+**
+SOLUTION ('apostilb', 0.008000000000000002, 'apostille')
+**
+SOLUTION ('Armenia', 0.0010000000000000002, 'armenia')
+**
+SOLUTION ('asystent', 0.0010000000000000002, 'asistent')
+**
+SOLUTION ('Atena', 0.0010000000000000002, 'atena')
+**
+SOLUTION ('Ateny', 0.0010000000000000002, 'ateny')
+**
+SOLUTION ('audytor', 0.026999999999999996, 'auditorów')
+**
+SOLUTION ('Auschwitz', 0.0010000000000000002, 'auschwitz')
+**
+SOLUTION ('antologiczny', 0.06400000000000002, 'autologicznego')
+**
+SOLUTION ('Paw', 0.0010000000000000002, 'aw')
+**
+SOLUTION ('Belina', 0.0010000000000000002, 'belina')
+**
+SOLUTION ('antagonistyczny', 0.06400000000000002, 'betaagonistycznym')
+**
+SOLUTION ('beania', 0.0010000000000000002, 'betania')
+**
+SOLUTION ('nierównoważność', 0.06400000000000002, 'biorównoważności')
+**
+SOLUTION ('Birkenau', 0.0010000000000000002, 'birkenau')
+**
+SOLUTION ('Bogusz', 0.0010000000000000002, 'bogusz')
+**
+SOLUTION ('Boguszów', 0.0010000000000000002, 'boguszów')
+**
+SOLUTION ('Braille', 0.0010000000000000002, 'braille')
+**
+SOLUTION ('bruceloza', 0.06400000000000002, 'brucellosis')
+**
+SOLUTION ('Błońska', 0.0010000000000000002, 'błońska')
+**
+SOLUTION ('kanabis', 0.008000000000000002, 'cannabis')
+**
+SOLUTION ('capina', 0.008000000000000002, 'caprine')
+**
+SOLUTION ('arta', 0.02016649457924626, 'cattles')
+**
+SOLUTION ('cab', 0.0010000000000000002, 'cał')
+**
+SOLUTION ('Bała', 0.0010000000000000002, 'cała')
+**
+SOLUTION ('czego', 0.0010000000000000002, 'cego')
+**
+SOLUTION ('chemiczny', 0.0010000000000000002, 'chemiczn')
+**
+SOLUTION ('chlor', 0.0010000000000000002, 'chloro')
+**
+SOLUTION ('cedr', 0.0010000000000000002, 'cidr')
+**
+SOLUTION ('cockpit', 0.026999999999999996, 'cobrpib')
+**
+SOLUTION ('consensus', 0.026999999999999996, 'condensed')
+**
+SOLUTION ('contra', 0.008000000000000002, 'control')
+**
+SOLUTION ('Zych', 0.0010000000000000002, 'cych')
+**
+SOLUTION ('cyjanamid', 0.026999999999999996, 'cyjanamidowy')
+**
+SOLUTION ('Aza', 0.0010000000000000002, 'cza')
+**
+SOLUTION ('Czechowski', 0.0010000000000000002, 'czechowski')
+**
+SOLUTION ('taninowy', 0.008000000000000002, 'daninowym')
+**
+SOLUTION ('deklarować', 0.008000000000000002, 'deklarow')
+**
+SOLUTION ('dwumocznik', 0.026999999999999996, 'dimocznika')
+**
+SOLUTION ('dit', 0.0010000000000000002, 'div')
+**
+SOLUTION ('Diego', 0.008000000000000002, 'dnego')
+**
+SOLUTION ('beg', 0.0010000000000000002, 'eeg')
+**
+SOLUTION ('ego', 0.0010000000000000002, 'egzo')
+**
+SOLUTION ('deklinometr', 0.125, 'ekoinfonetu')
+**
+SOLUTION ('Klim', 0.0010000000000000002, 'elim')
+**
+SOLUTION ('end', 0.0010000000000000002, 'endo')
+**
+SOLUTION ('Ania', 0.0010000000000000002, 'enia')
+**
+SOLUTION ('endemiczny', 0.06400000000000002, 'enodimoczn')
+**
+SOLUTION ('arta', 0.0026135776974703148, 'eutc')
+**
+SOLUTION ('Dandong', 0.026999999999999996, 'fangsong')
+**
+SOLUTION ('Ob', 0.0010000000000000002, 'fb')
+**
+SOLUTION ('Francja', 0.0010000000000000002, 'francja')
+**
+SOLUTION ('geminacja', 0.125, 'gemeinschaft')
+**
+SOLUTION ('bhp', 0.0010000000000000002, 'ghp')
+**
+SOLUTION ('megadżul', 0.008000000000000002, 'gigadżul')
+**
+SOLUTION ('miss', 0.008000000000000002, 'gmdss')
+**
+SOLUTION ('gap', 0.0010000000000000002, 'gmp')
+**
+SOLUTION ('Arecka', 0.0010000000000000002, 'grecka')
+**
+SOLUTION ('Górnicz', 0.0010000000000000002, 'górnicz')
+**
+SOLUTION ('Górska', 0.0010000000000000002, 'górska')
+**
+SOLUTION ('hematopoeza', 0.125, 'haematopoietic')
+**
+SOLUTION ('Haga', 0.0010000000000000002, 'haga')
+**
+SOLUTION ('Kagera', 0.0010000000000000002, 'hagera')
+**
+SOLUTION ('Ob', 0.008000000000000002, 'hbv')
+**
+SOLUTION ('heksagon', 0.0010000000000000002, 'heksanon')
+**
+SOLUTION ('Helsinki', 0.0010000000000000002, 'helsinki')
+**
+SOLUTION ('heptagon', 0.0010000000000000002, 'heptanon')
+**
+SOLUTION ('highway', 0.008000000000000002, 'highly')
+**
+SOLUTION ('hydrolizat', 0.026999999999999996, 'hydrolizatory')
+**
+SOLUTION ('hydrometeorologiczny', 1.0, 'hydrologicznometeorologicznych')
+**
+SOLUTION ('az', 0.0010000000000000002, 'hz')
+**
+SOLUTION ('La', 0.0010000000000000002, 'ia')
+**
+SOLUTION ('instrumentalistka', 0.008000000000000002, 'instrumentalistyki')
+**
+SOLUTION ('niekalibracyjny', 0.125, 'interkalibracyjnych')
+**
+SOLUTION ('Interpol', 0.0010000000000000002, 'interpol')
+**
+SOLUTION ('ibn', 0.0010000000000000002, 'isbn')
+**
+SOLUTION ('Liszt', 0.008000000000000002, 'isbt')
+**
+SOLUTION ('au', 0.0010000000000000002, 'iu')
+**
+SOLUTION ('iwa', 0.0010000000000000002, 'ixa')
+**
+SOLUTION ('Jarocin', 0.0010000000000000002, 'jarocin')
+**
+SOLUTION ('Jastrzębia', 0.0010000000000000002, 'jastrzębia')
+**
+SOLUTION ('Jastrzębie', 0.0010000000000000002, 'jastrzębie')
+**
+SOLUTION ('jednodaniowy', 0.008000000000000002, 'jednowapniowy')
+**
+SOLUTION ('Haiti', 0.0010000000000000002, 'kaiti')
+**
+SOLUTION ('Kamienna', 0.0010000000000000002, 'kamienna')
+**
+SOLUTION ('Kamionek', 0.0010000000000000002, 'kamionek')
+**
+SOLUTION ('Katowickie', 0.0010000000000000002, 'katowickie')
+**
+SOLUTION ('Kidawa', 0.0010000000000000002, 'kidawa')
+**
+SOLUTION ('Komor', 0.0010000000000000002, 'komor')
+**
+SOLUTION ('Komory', 0.0010000000000000002, 'komory')
+**
+SOLUTION ('Dow', 0.0010000000000000002, 'kow')
+**
+SOLUTION ('kbk', 0.0010000000000000002, 'kpk')
+**
+SOLUTION ('krokodyli', 0.06400000000000002, 'krotonylide')
+**
+SOLUTION ('Aso', 0.008000000000000002, 'ksow')
+**
+SOLUTION ('kary', 0.0010000000000000002, 'ktry')
+**
+SOLUTION ('atu', 0.0010000000000000002, 'ktu')
+**
+SOLUTION ('kwadratowy', 0.0010000000000000002, 'kwadratowyc')
+**
+SOLUTION ('kwa', 0.0010000000000000002, 'kwh')
+**
+SOLUTION ('Biden', 0.026999999999999996, 'lidenod')
+**
+SOLUTION ('Marino', 0.0010000000000000002, 'marino')
+**
+SOLUTION ('Mark', 0.0010000000000000002, 'mark')
+**
+SOLUTION ('Małgorzata', 0.0010000000000000002, 'małgorzata')
+**
+SOLUTION ('Małkinia', 0.0010000000000000002, 'małkinia')
+**
+SOLUTION ('Ada', 0.0010000000000000002, 'mda')
+**
+SOLUTION ('metical', 0.0010000000000000002, 'medical')
+**
+SOLUTION ('meryt', 0.008000000000000002, 'meiryo')
+**
+SOLUTION ('Berlin', 0.008000000000000002, 'meslin')
+**
+SOLUTION ('metadon', 0.0010000000000000002, 'metanon')
+**
+SOLUTION ('metylobenzen', 0.125, 'metylobutylo')
+**
+SOLUTION ('mikroelement', 0.008000000000000002, 'mikroeleme')
+**
+SOLUTION ('mikroinstalacji', 0.037037037037037035, 'mikroinstalacja')
+**
+SOLUTION ('mikroinstalacji', 0.037037037037037035, 'mikroinstalacje')
+**
+SOLUTION ('mikroprzedsiębiorstwo', 0.06400000000000002, 'mikroprzedsiębiorcy')
+**
+SOLUTION ('międzykomunalny', 0.21599999999999997, 'międzykościelnych')
+**
+SOLUTION ('międzyatomowy', 0.21599999999999997, 'międzysystemowych')
+**
+SOLUTION ('morfina', 0.008000000000000002, 'morfolina')
+**
+SOLUTION ('Korpak', 0.0010000000000000002, 'morpak')
+**
+SOLUTION ('mykoplazma', 0.008000000000000002, 'mycoplasma')
+**
+SOLUTION ('Cyriak', 0.008000000000000002, 'myriad')
+**
+SOLUTION ('Mysłowice', 0.0010000000000000002, 'mysłowice')
+**
+SOLUTION ('naftol', 0.008000000000000002, 'naftoilo')
+**
+SOLUTION ('naturalnie', 0.008000000000000002, 'naturalneg')
+**
+SOLUTION ('naukoznawczy', 0.21599999999999997, 'naukowobadawcze')
+**
+SOLUTION ('naukoznawczy', 0.3429999999999999, 'naukowobadawczej')
+**
+SOLUTION ('cross', 0.026999999999999996, 'necrosis')
+**
+SOLUTION ('Dietrich', 0.026999999999999996, 'niektrych')
+**
+SOLUTION ('niby', 0.0010000000000000002, 'niny')
+**
+SOLUTION ('Bodych', 0.026999999999999996, 'niowych')
+**
+SOLUTION ('Akad', 0.008000000000000002, 'nkwd')
+**
+SOLUTION ('noworocznik', 0.026999999999999996, 'nodimocznik')
+**
+SOLUTION ('kości', 0.0010000000000000002, 'ności')
+**
+SOLUTION ('Odolan', 0.0010000000000000002, 'odolan')
+**
+SOLUTION ('Odolanów', 0.0010000000000000002, 'odolanów')
+**
+SOLUTION ('Gold', 0.0010000000000000002, 'old')
+**
+SOLUTION ('Popow', 0.008000000000000002, 'opcw')
+**
+SOLUTION ('operacjonalizm', 1.3310000000000004, 'operacyjnoratowniczego')
+**
+SOLUTION ('fru', 0.0010000000000000002, 'oru')
+**
+SOLUTION ('orzecznik', 0.0010000000000000002, 'orzecznikw')
+**
+SOLUTION ('kosiarz', 0.008000000000000002, 'osiarc')
+**
+SOLUTION ('oszczędnościowy', 1.3310000000000004, 'oszczędnościowokredytowych')
+**
+SOLUTION ('otrzymywać', 0.0010000000000000002, 'otrzymywa')
+**
+SOLUTION ('kołnierz', 0.008000000000000002, 'ołnierzy')
+**
+SOLUTION ('Pabianice', 0.0010000000000000002, 'pabianice')
+**
+SOLUTION ('Pasieki', 0.0010000000000000002, 'pasieki')
+**
+SOLUTION ('centylion', 0.125, 'pentyloindol')
+**
+SOLUTION ('Rh', 0.0010000000000000002, 'ph')
+**
+SOLUTION ('pies', 0.0010000000000000002, 'pigs')
+**
+SOLUTION ('Pilchowice', 0.0010000000000000002, 'pilchowice')
+**
+SOLUTION ('pirymidyna', 0.008000000000000002, 'pirolidyna')
+**
+SOLUTION ('pirolityczny', 0.125, 'pirolidynylo')
+**
+SOLUTION ('Plata', 0.0010000000000000002, 'plata')
+**
+SOLUTION ('Plato', 0.0010000000000000002, 'plato')
+**
+SOLUTION ('pneumonia', 0.0010000000000000002, 'pneumoniae')
+**
+SOLUTION ('Podlaska', 0.0010000000000000002, 'podlaska')
+**
+SOLUTION ('powielokrotność', 0.026999999999999996, 'podwielokrotności')
+**
+SOLUTION ('górniczy', 0.06400000000000002, 'pogórniczych')
+**
+SOLUTION ('pogodowy', 0.008000000000000002, 'posodowe')
+**
+SOLUTION ('dowodowo', 0.06400000000000002, 'posodowego')
+**
+SOLUTION ('postać', 0.0010000000000000002, 'postac')
+**
+SOLUTION ('po', 0.0010000000000000002, 'pox')
+**
+SOLUTION ('arta', 0.0005162622612287042, 'pra')
+**
+SOLUTION ('Broda', 0.008000000000000002, 'produ')
+**
+SOLUTION ('praecho', 0.0010000000000000002, 'przecho')
+**
+SOLUTION ('przeliczać', 0.008000000000000002, 'przeliczen')
+**
+SOLUTION ('przeprawa', 0.0010000000000000002, 'przeprowa')
+**
+SOLUTION ('przeszczepiać', 0.008000000000000002, 'przeszczepień')
+**
+SOLUTION ('przerzec', 0.008000000000000002, 'przezeń')
+**
+SOLUTION ('Kubicz', 0.008000000000000002, 'publicz')
+**
+SOLUTION ('denazyfikacja', 0.026999999999999996, 'regazyfikacji')
+**
+SOLUTION ('rozpuk', 0.0010000000000000002, 'rozpu')
+**
+SOLUTION ('mroziwo', 0.008000000000000002, 'roztwo')
+**
+SOLUTION ('roślina', 0.0010000000000000002, 'roślinn')
+**
+SOLUTION ('rytornel', 0.125, 'rytorialnego')
+**
+SOLUTION ('salmonelloza', 0.026999999999999996, 'salmonellosis')
+**
+SOLUTION ('salmonelloza', 0.008000000000000002, 'salmonelozy')
+**
+SOLUTION ('Dana', 0.0010000000000000002, 'sana')
+**
+SOLUTION ('nieepidemiologiczny', 0.5120000000000001, 'sanitarnoepidemiologiczne')
+**
+SOLUTION ('Fatima', 0.008000000000000002, 'sativa')
+**
+SOLUTION ('ce', 0.0010000000000000002, 'sce')
+**
+SOLUTION ('Secret', 0.0010000000000000002, 'secret')
+**
+SOLUTION ('epidemia', 0.06400000000000002, 'septicaemia')
+**
+SOLUTION ('sleep', 0.0010000000000000002, 'sheep')
+**
+SOLUTION ('Siemianowice', 0.0010000000000000002, 'siemianowice')
+**
+SOLUTION ('Sieradz', 0.0010000000000000002, 'sieradz')
+**
+SOLUTION ('składnik', 0.0010000000000000002, 'składnikw')
+**
+SOLUTION ('Sopot', 0.0010000000000000002, 'sopot')
+**
+SOLUTION ('szpeciel', 0.008000000000000002, 'species')
+**
+SOLUTION ('sprzedać', 0.0010000000000000002, 'sprzedaą')
+**
+SOLUTION ('stilbenowy', 0.008000000000000002, 'stilbenów')
+**
+SOLUTION ('partycypacja', 0.06400000000000002, 'subpartycypację')
+**
+SOLUTION ('szczegół', 0.0010000000000000002, 'szczegól')
+**
+SOLUTION ('szczegółowo', 0.008000000000000002, 'szczegłowe')
+**
+SOLUTION ('samowychowawczy', 0.3429999999999999, 'szkolnowychowawczych')
+**
+SOLUTION ('samowychowawczy', 0.21599999999999997, 'szkolnowychowawczym')
+**
+SOLUTION ('Szreniawa', 0.0010000000000000002, 'szreniawa')
+**
+SOLUTION ('nieubezpieczeniowy', 1.0, 'technicznoubezpieczeniowych')
+**
+SOLUTION ('nekton', 0.0010000000000000002, 'tekton')
+**
+SOLUTION ('telesprzedaży', 0.05, 'telesprzedaż')
+**
+SOLUTION ('edytorial', 0.008000000000000002, 'terytorial')
+**
+SOLUTION ('test', 0.0010000000000000002, 'testw')
+**
+SOLUTION ('Pio', 0.0010000000000000002, 'tio')
+**
+SOLUTION ('bość', 0.0010000000000000002, 'tość')
+**
+SOLUTION ('bifenyl', 0.026999999999999996, 'trifenyle')
+**
+SOLUTION ('Trzebinia', 0.0010000000000000002, 'trzebinia')
+**
+SOLUTION ('ostrzeżenie', 0.026999999999999996, 'trzeżeniem')
+**
+SOLUTION ('tuberkulid', 0.06400000000000002, 'tuberculosis')
+**
+SOLUTION ('Tworóg', 0.0010000000000000002, 'tworóg')
+**
+SOLUTION ('Tychy', 0.0010000000000000002, 'tychy')
+**
+SOLUTION ('bezpiecze', 0.0010000000000000002, 'ubezpiecze')
+**
+SOLUTION ('bop', 0.0010000000000000002, 'uop')
+**
+SOLUTION ('ureaform', 0.0010000000000000002, 'ureafor')
+**
+SOLUTION ('La', 0.0010000000000000002, 'va')
+**
+SOLUTION ('Galek', 0.0010000000000000002, 'walek')
+**
+SOLUTION ('barycentrum', 0.21599999999999997, 'warszawacentrum')
+**
+SOLUTION ('warczeć', 0.008000000000000002, 'wawczej')
+**
+SOLUTION ('wełnopodobny', 0.026999999999999996, 'winopodobne')
+**
+SOLUTION ('wełnopodobny', 0.06400000000000002, 'winopodobnych')
+**
+SOLUTION ('jednogłośny', 0.21599999999999997, 'wodnobłotnych')
+**
+SOLUTION ('wodnokanalizacyjny', 1.0, 'wodociągowokanalizacyjnego')
+**
+SOLUTION ('współkontroli', 0.08333333333333333, 'współkontrolę')
+**
+SOLUTION ('wymienić', 0.0010000000000000002, 'wymienio')
+**
+SOLUTION ('wypożyczać', 0.008000000000000002, 'wypożyczeń')
+**
+SOLUTION ('Władysław', 0.0010000000000000002, 'władysław')
+**
+SOLUTION ('Władysława', 0.0010000000000000002, 'władysława')
+**
+SOLUTION ('Levi', 0.026999999999999996, 'xxxvi')
+**
+SOLUTION ('Dacja', 0.008000000000000002, 'zacją')
+**
+SOLUTION ('zadrzewieniowy', 0.026999999999999996, 'zadrzewieniach')
+**
+SOLUTION ('Bania', 0.0010000000000000002, 'zania')
+**
+SOLUTION ('Has', 0.0010000000000000002, 'zas')
+**
+SOLUTION ('zasiedlać', 0.008000000000000002, 'zasiedleń')
+**
+SOLUTION ('zbyrczeć', 0.008000000000000002, 'zbywczej')
+**
+SOLUTION ('zbawczy', 0.008000000000000002, 'zbywczą')
+**
+SOLUTION ('mikrodokument', 13.823999999999998, 'zmczciwsppktodnonikaartykuempunktem')
+**
+SOLUTION ('Brych', 0.008000000000000002, 'znych')
+**
+SOLUTION ('Czu', 0.0010000000000000002, 'zu')
+**
+SOLUTION ('zwierzęcieć', 0.008000000000000002, 'zwierzęceg')
+**
+SOLUTION ('zwiad', 0.0010000000000000002, 'świad')
+**
+SOLUTION ('Świętochłowice', 0.0010000000000000002, 'świętochłowice')
+**
+SOLUTION ('bary', 0.0010000000000000002, 'żary')
+**
+SOLUTION ('dżetowy', 0.026999999999999996, 'żetowych')
+**
+SOLUTION ('Mory', 0.0010000000000000002, 'żory')
+**
+SOLUTION ('Żydowo', 0.0010000000000000002, 'żydowo')
+**
