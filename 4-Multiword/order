@@ -1,0 +1,7 @@
+python3 make_ranking.py
+
+python3 read_bills_for_words.py
+
+python3 count_bigrams.py
+
+python3 mip.py
