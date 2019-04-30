@@ -655,6 +655,18 @@ ii.
 ['wypadek drogowy_1', 'wypadek komunikacyjny_1', 'hiponimia']
 
 
+# Find the value of Leacock-Chodorow semantic similarity measure between following pairs of lexemes:
+
+   i. szkoda2 - wypadek1,
+   ii. kolizja2 - szkoda majątkowa1,
+   iii. nieszczęście2 - katastrofa budowlana1.
+
+
+Leacock-Chodorow semantic similarity
+Synset('szkoda.n.02') Synset('wypadek.n.01') 2.740840023925201
+Synset('kolizja.n.02') Synset('szkoda.n.01') None
+Synset('nieszczęście.n.02') Synset('katastrofa_budowlana.n.01') None
+
 
 
 
