@@ -1,0 +1,666 @@
+# Find all meanings of the szkoda noun and display all their synonyms.
+
+
+### Firstly, I look for senses and synsets:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/senses/search?lemma=szkoda&&&partOfSpeech=noun&&&&&&
+
+{
+  "content": [
+    {
+      "id": 8769,
+      "domain": {
+        "id": 12,
+        "name": "plWN_msc",
+        "description": "plWN miejsca i umiejscowienie",
+        "lexicon": {
+          "id": 1,
+          "name": "Słowosieć 2.2",
+          "lexiconIdentifier": "P 2.2",
+          "language": "pl"
+        }
+      },
+      "lemma": {
+        "id": 249489,
+        "word": "szkoda"
+      },
+      "partOfSpeech": {
+        "id": 2,
+        "name": "plWN rzeczownik",
+        "lexicon": {
+          "id": 1,
+          "name": "Słowosieć 2.2",
+          "lexiconIdentifier": "P 2.2",
+          "language": "pl"
+        },
+        "lmfType": "noun"
+      },
+      "senseNumber": 1,
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    {
+      "id": 8771,
+      "domain": {
+        "id": 18,
+        "name": "plWN_pos",
+        "description": "plWN posiadanie i jego zmiana",
+        "lexicon": {
+          "id": 1,
+          "name": "Słowosieć 2.2",
+          "lexiconIdentifier": "P 2.2",
+          "language": "pl"
+        }
+      },
+      "lemma": {
+        "id": 249489,
+        "word": "szkoda"
+      },
+      "partOfSpeech": {
+        "id": 2,
+        "name": "plWN rzeczownik",
+        "lexicon": {
+          "id": 1,
+          "name": "Słowosieć 2.2",
+          "lexiconIdentifier": "P 2.2",
+          "language": "pl"
+        },
+        "lmfType": "noun"
+      },
+      "senseNumber": 2,
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    }
+  ],
+  "last": true,
+  "totalPages": 1,
+  "totalElements": 2,
+  "firstPage": true,
+  "lastPage": true,
+  "first": true,
+  "sort": [
+    {
+      "direction": "ASC",
+      "property": "lemma",
+      "ignoreCase": false,
+      "nullHandling": "NATIVE",
+      "ascending": true
+    },
+    {
+      "direction": "ASC",
+      "property": "senseNumber",
+      "ignoreCase": false,
+      "nullHandling": "NATIVE",
+      "ascending": true
+    },
+    {
+      "direction": "ASC",
+      "property": "lexicon.id",
+      "ignoreCase": false,
+      "nullHandling": "NATIVE",
+      "ascending": true
+    }
+  ],
+  "numberOfElements": 2,
+  "size": 500,
+  "number": 0
+}
+
+### SYNSETS:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/search?lemma=szkoda&&&partOfSpeech=noun&&&&&&
+
+[
+  {
+    "id": 8495,
+    "domain": {
+      "id": 8,
+      "name": "plWN_zdarz",
+      "description": "plWN zdarzenia",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 243080,
+      "word": "strata"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 1,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  },
+  {
+    "id": 8769,
+    "domain": {
+      "id": 12,
+      "name": "plWN_msc",
+      "description": "plWN miejsca i umiejscowienie",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 249489,
+      "word": "szkoda"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 1,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  }
+]
+
+
+### Then, I try to find the meaning, using synsets ids:
+
+### for id = 8495 (first meaning of "szkoda", which belongs to sysnet represented by "strata")
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/senses/8495/attributes/definition
+
+{
+  "id": 2132402,
+  "type": {
+    "id": 15,
+    "typeName": "definition",
+    "tableName": "sense"
+  },
+  "value": "mimowolna utrata czegoś, szkoda"
+}
+
+
+Any other id does not return anything, so I try to find the owning synset. 
+
+
+I have found the synset id for first sense:
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/senses/8769/synset
+
+{
+  "id": 6533,
+  "split": 1
+}
+
+The meaning of the second one can be found inside the comment in the attributes of synset with id = 6533:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/6533/attributes
+
+[
+  {
+    "id": 339612,
+    "type": {
+      "id": 1,
+      "typeName": "comment",
+      "tableName": "sense"
+    },
+    "value": "ziemia w gospodarstwie zniszczona przez zwierzęta",
+    "synset": {
+      "id": 6533,
+      "split": 1
+    }
+  },
+  {
+    "id": 339613,
+    "type": {
+      "id": 4,
+      "typeName": "comment",
+      "tableName": "synset"
+    },
+    "value": "ziemia w gospodarstwie zniszczona przez zwierzęta",
+    "synset": {
+      "id": 6533,
+      "split": 1
+    }
+  },
+  {
+    "id": 923459,
+    "type": {
+      "id": 6,
+      "typeName": "isabstract",
+      "tableName": "synset"
+    },
+    "value": "0",
+    "synset": {
+      "id": 6533,
+      "split": 1
+    }
+  },
+  {
+    "id": 1369009,
+    "type": {
+      "id": 16,
+      "typeName": "owner",
+      "tableName": "synset"
+    },
+    "value": "Agnieszka.Dziob",
+    "synset": {
+      "id": 6533,
+      "split": 1
+    }
+  }
+]
+
+
+### To get synonyms, I started with finding the owning synset:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/senses/8495/synset
+
+{
+  "id": 3675,
+  "split": 1
+}
+
+
+### Using this id to find synonyms:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/3675/senses
+
+[
+  {
+    "id": 8495,
+    "domain": {
+      "id": 8,
+      "name": "plWN_zdarz",
+      "description": "plWN zdarzenia",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 243080,
+      "word": "strata"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 1,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  },
+  {
+    "id": 9582,
+    "domain": {
+      "id": 8,
+      "name": "plWN_zdarz",
+      "description": "plWN zdarzenia",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 270916,
+      "word": "utrata"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 1,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  },
+  {
+    "id": 8771,
+    "domain": {
+      "id": 18,
+      "name": "plWN_pos",
+      "description": "plWN posiadanie i jego zmiana",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 249489,
+      "word": "szkoda"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 2,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  },
+  {
+    "id": 29762,
+    "domain": {
+      "id": 8,
+      "name": "plWN_zdarz",
+      "description": "plWN zdarzenia",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 270658,
+      "word": "uszczerbek"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 1,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  }
+]
+
+### For the other sense (and its synset):
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/6533/senses
+
+[
+  {
+    "id": 8769,
+    "domain": {
+      "id": 12,
+      "name": "plWN_msc",
+      "description": "plWN miejsca i umiejscowienie",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 249489,
+      "word": "szkoda"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+    "senseNumber": 1,
+    "lexicon": {
+      "id": 1,
+      "name": "Słowosieć 2.2",
+      "lexiconIdentifier": "P 2.2",
+      "language": "pl"
+    }
+  }
+]
+
+
+# Find closure of hypernymy relation for the first meaning of the wypadek drogowy expression. Create diagram of the relations as a directed graph.
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/search?lemma=wypadek%20drogowy&&&&&&&&&
+
+[
+  {
+    "id": 644786,
+    "domain": {
+      "id": 8,
+      "name": "plWN_zdarz",
+      "description": "plWN zdarzenia",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 286392,
+      "word": "wypadek drogowy"
+    },
+    "partOfSpeech": {
+      "id": 2,
+      "name": "plWN rzeczownik",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      },
+      "lmfType": "noun"
+    },
+
+(...)
+]
+
+### Let's start by finding owning synset:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/senses/644786/synset
+
+{
+  "id": 410902,
+  "split": 1
+}
+
+### relations:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/410902/relations
+
+[
+  {
+    "id": 976871,
+    "relation": {
+      "id": 10,
+      "name": "hiponimia",
+      (...)
+    },
+    "synsetFrom": {
+      "id": 410902,
+      "split": 1
+    },
+    "synsetTo": {
+      "id": 410901,
+      "split": 1
+    }
+  },
+  {
+    "id": 976870,
+    "relation": {
+      "id": 11,
+      "name": "hiperonimia",
+      "multilingual": false,
+      (...)
+    },
+    "synsetFrom": {
+      "id": 410901,
+      "split": 1
+    },
+    "synsetTo": {
+      "id": 410902,
+      "split": 1
+    }
+  }
+]
+
+### So we have id=410901, which we check:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/410901/senses
+
+[
+  {
+    "id": 644778,
+    "domain": {
+      "id": 8,
+      "name": "plWN_zdarz",
+      "description": "plWN zdarzenia",
+      "lexicon": {
+        "id": 1,
+        "name": "Słowosieć 2.2",
+        "lexiconIdentifier": "P 2.2",
+        "language": "pl"
+      }
+    },
+    "lemma": {
+      "id": 286393,
+      "word": "wypadek komunikacyjny"
+    },
+    (...)
+  }
+]
+
+### then repeat the process:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/synsets/410901/relations
+
+### and find synsetFrom to be id=3982. The word associated with this synset is "wypadek"
+
+### then repeat (searching for hypernymy with the synsetTo's id=3982) and find id=27419. The word associated with this synset is "zdarzenie oceniane negatywnie".
+
+### id=6526, The word associated with this synset is "wydarzenie".
+
+
+# Find direct hyponyms of wypadek1 noun.
+
+### let's find first sense of wypadek:
+
+http://api.slowosiec.clarin-pl.eu:80/plwordnet-api/senses/search?lemma=wypadek&&&partOfSpeech=noun&&&&&&
+
+### id=21890, synset id=3982
+
+### using a python script, I've found answers:
+
+Direct hyponyms of wypadek_1 noun:
+ ['zawał', 'tąpnięcie', 'katastrofa', 'wykolejenie', 'zakrztuszenie', 'zachłyśnięcie', 'wypadek komunikacyjny', 'katastrofa budowlana']
+
+Second-order hyponyms of wypadek_1 noun:
+{'obwał', 'wypadek drogowy'}
+
+
+
+# Display as a directed graph (with labels for the edges) semantic relations between the following groups of lexemes:
+
+	i. szkoda2, strata1, uszczerbek1, szkoda majątkowa1, uszczerbek na zdrowiu1, krzywda1, niesprawiedliwość1, nieszczęście2.
+
+	ii. wypadek1, wypadek komunikacyjny1, kolizja2, zderzenie2, kolizja drogowa1, bezkolizyjny2, katastrofa budowlana1, wypadek drogowy1.
+
+
+
+i.
+
+['nieszczęście_2', 'krzywda_1 | niesprawiedliwość_1', 'hiperonimia']
+['krzywda_1 | niesprawiedliwość_1', 'nieszczęście_2', 'hiponimia']
+['uszczerbek na zdrowiu_1', 'szkoda_2 | strata_1 | uszczerbek_1', 'hiponimia']
+['szkoda_2 | strata_1 | uszczerbek_1', 'uszczerbek na zdrowiu_1', 'hiperonimia']
+['szkoda_2 | strata_1 | uszczerbek_1', 'krzywda_1 | niesprawiedliwość_1', 'hiperonimia']
+['krzywda_1 | niesprawiedliwość_1', 'szkoda_2 | strata_1 | uszczerbek_1', 'hiponimia']
+
+ii.
+
+['katastrofa budowlana_1', 'wypadek_1', 'hiponimia']
+['wypadek_1', 'katastrofa budowlana_1', 'hiperonimia']
+['wypadek komunikacyjny_1', 'wypadek_1', 'hiponimia']
+['wypadek komunikacyjny_1', 'wypadek drogowy_1', 'hiperonimia']
+['wypadek_1', 'wypadek komunikacyjny_1', 'hiperonimia']
+['wypadek drogowy_1', 'wypadek komunikacyjny_1', 'hiponimia']
+
+
+
+
+
+
+
+
+
+
+
