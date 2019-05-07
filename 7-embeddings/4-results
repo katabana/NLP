@@ -1,0 +1,36 @@
+sąd wysoki - kpc + konstytucja
+('ne#Wysoki_Sąd::noun', 0.7213104963302612)
+('ne#Wilsonie::noun', 0.6462504863739014)
+('ne#Wasza_Eminencja::noun', 0.6453283429145813)
+('ne#Zuokas::noun', 0.6425788998603821)
+('ne#Lech_W_ałęsa::noun', 0.6379048228263855)
+('ne#Gauck::noun', 0.6362863779067993)
+('prezydent::noun', 0.6322360038757324)
+('ne#Kongres::noun', 0.6312170028686523)
+('ekscelencja::noun', 0.6288363933563232)
+('ne#Cioskowi::noun', 0.6277444362640381)
+
+pasazer - mezczyzna + kobieta
+('pasażer::noun', 0.9536111950874329)
+('podróżny::noun', 0.8415741324424744)
+('współpasażer::noun', 0.7920055389404297)
+('podróżujący::noun', 0.7550978660583496)
+('kierowca::noun', 0.7446857690811157)
+('bagażowy::noun', 0.7316379547119141)
+('turysta::noun', 0.7310489416122437)
+('podróżny::adj', 0.7293795347213745)
+('stewardesa::noun', 0.725443959236145)
+('pasażerski::adj', 0.7142226696014404)
+
+samochód - droga + rzeka
+('motorówka::noun', 0.7439929842948914)
+('jezioro::noun', 0.7345261573791504)
+('Łódź::noun', 0.7254728078842163)
+('rzeka::noun', 0.7248798608779907)
+('ne#Helensburgha::noun', 0.7246426343917847)
+('ne#East_River::noun', 0.7199319005012512)
+('ne#Hudsonu::noun', 0.7093889713287354)
+('ne#Viroma::noun', 0.7086551189422607)
+('łódka::noun', 0.7058143615722656)
+('dżip::noun', 0.7049764394760132)
+
