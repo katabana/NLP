@@ -1,0 +1,15 @@
+text {
+  font: 30px monospace;
+}
+
+.enter {
+  fill: green;
+}
+
+.exit {
+  fill: red;
+}
+
+.update {
+  fill: #333;
+}
